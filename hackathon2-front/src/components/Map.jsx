@@ -24,8 +24,6 @@ const markerIcon = new L.icon({
 
 
 const Map = () => {
-  // const [position, setPosition] = useState(null);
-
   // useLeafletContext((position) => {
   //   geolocation.getCurrentPosition(function (err, position) {
   //     console.log(position)
@@ -82,7 +80,7 @@ const Map = () => {
           position={[city.lat, city.longitude]}
           icon={greenIcon}
         ></Marker>
-        
+
       ))}
       <Marker
         position={[48.448959714197414, 1.537250677752061]}
