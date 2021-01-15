@@ -1,13 +1,24 @@
 import React from "react";
 import SearchButton from "./SearchButton";
 import SearchBar from "./SearchBar";
+import FilterButton from "./FilterButton";
 
 import "./rightBar.css";
+import FilterPopUp from "./filterPopUp";
 
-const RightBar = ({ searchBarOn, handleClick, handleChange, zipcodeInput, citiesWithZipcode }) => {
+const RightBar = ({ searchBarOn, handleClick, handleChange, zipcodeInput, citiesWithZipcode, filterBarOn, handleFilterClick, handleFilterClient }) => {
 
     return (
         <div className="right-bar">
+            <FilterButton
+                filterBarOn={filterBarOn}
+                handleClick={handleFilterClick}
+            />
+            <FilterPopUp
+                filterBarOn={filterBarOn}
+                handleClick={handleFilterClick}
+                handleFilterClient={handleFilterClient}
+            />
             <SearchButton searchBarOn={searchBarOn} handleClick={handleClick} />
             <SearchBar
                 searchBarOn={searchBarOn}
