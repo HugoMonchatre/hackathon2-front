@@ -1,0 +1,117 @@
+[
+    {
+        "id": 1,
+        "name": "Blé Standard 76-220-11",
+        "category": "ble"
+    },
+    {
+        "id": 2,
+        "name": "Epeautre Non Décortiqué",
+        "category": "ble"
+    },
+    {
+        "id": 3,
+        "name": "Blé C2",
+        "category": "ble"
+    },
+    {
+        "id": 4,
+        "name": "Blé Fourrager Ps: 74",
+        "category": "ble"
+    },
+    {
+        "id": 5,
+        "name": "Blé Dur Aux Normes",
+        "category": "ble"
+    },
+    {
+        "id": 6,
+        "name": "Blé Améliorant",
+        "category": "ble"
+    },
+    {
+        "id": 7,
+        "name": "Avoine Noire Ps48/50",
+        "category": "avoine"
+    },
+    {
+        "id": 8,
+        "name": "Avoine Noire Ps52",
+        "category": "avoine"
+    },
+    {
+        "id": 9,
+        "name": "Triticale",
+        "category": "triticale"
+    },
+    {
+        "id": 10,
+        "name": "Orge Fourragère Ps 62-63",
+        "category": "orge"
+    },
+    {
+        "id": 11,
+        "name": "Orge Fourragère Ps 60",
+        "category": "orge"
+    },
+    {
+        "id": 12,
+        "name": "Orge Fourragère Variété Spécifique",
+        "category": "orge"
+    },
+    {
+        "id": 13,
+        "name": "Orge Avec 9% Maximum De Blé",
+        "category": "orge"
+    },
+    {
+        "id": 14,
+        "name": "Maïs Grain",
+        "category": "mais"
+    },
+    {
+        "id": 15,
+        "name": "Maïs Rond",
+        "category": "mais"
+    },
+    {
+        "id": 16,
+        "name": "Pois Jaunes",
+        "category": "pois"
+    },
+    {
+        "id": 17,
+        "name": "Pois Fourragers",
+        "category": "pois"
+    },
+    {
+        "id": 18,
+        "name": "Pois Verts",
+        "category": "pois"
+    },
+    {
+        "id": 19,
+        "name": "colza",
+        "category": "colza"
+    },
+    {
+        "id": 20,
+        "name": "Tournesol Standard",
+        "category": "tournesol"
+    },
+    {
+        "id": 21,
+        "name": "Tournesol Oléique",
+        "category": "tournesol"
+    },
+    {
+        "id": 22,
+        "name": "Féveroles Fourragères",
+        "category": "feverol"
+    },
+    {
+        "id": 23,
+        "name": "Féveroles C2",
+        "category": "feverol"
+    }
+]
