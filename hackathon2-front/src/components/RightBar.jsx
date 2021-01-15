@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import SearchButton from "./SearchButton";
 import SearchBar from "./SearchBar";
 
 import "./rightBar.css";
 
-const RightBar = () => {
-    const [searchBarOn, SetSearchBarOn] = useState(false);
+const RightBar = ({ searchBarOn, handleClick, handleChange, zipcodeInput, citiesWithZipcode }) => {
 
-    const onClick = () => {
-        SetSearchBarOn(!searchBarOn);
-    }
     return (
         <div className="right-bar">
-            <SearchButton searchBarOn={searchBarOn} onClick={onClick} />
-            <SearchBar searchBarOn={searchBarOn} onClick={onClick} />
+            <SearchButton searchBarOn={searchBarOn} handleClick={handleClick} />
+            <SearchBar
+                searchBarOn={searchBarOn}
+                handleClick={handleClick}
+                handleChange={handleChange}
+                zipcodeInput={zipcodeInput}
+                citiesWithZipcode={citiesWithZipcode}
+            />
         </div>
     )
 }
