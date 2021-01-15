@@ -10,6 +10,7 @@ function App() {
   const [citiesWithZipcode, setCitiesWithZipcode] = useState([]);
   const [zipcodeInput, setZipcodeInput] = useState("");
   const [clientFilter, setClientFilter] = useState(false);
+  const [center, setCenter] = useState([48.448553368159985, 1.5381089746419778])
 
   const handleZipcodeChange = (e) => {
     setZipcodeInput(e.target.value);
@@ -51,10 +52,15 @@ function App() {
   const handleFilterClient = () => {
     setClientFilter(!clientFilter);
   }
+
+  const handleClickZip = (index) => {
+    setCenter([citiesWithZipcode[index].lat, citiesWithZipcode[index].longitude])
+  }
   return (
     <div className="App">
       <Map
-        clientFilter={clientFilter} />
+        clientFilter={clientFilter}
+        centerPosition={center} />
       <RightBar
         searchBarOn={searchBarOn}
         filterBarOn={filterBarOn}
@@ -64,6 +70,7 @@ function App() {
         zipcodeInput={zipcodeInput}
         citiesWithZipcode={citiesWithZipcode}
         handleFilterClient={handleFilterClient}
+        handleClickZip={handleClickZip}
       />
     </div>
   );

@@ -2,3 +2,34 @@
   height: 100vh;
   z-index: 0;
 }
+
+.div-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}
+.PopTitle {
+  font-size: 14px;
+  justify-content: space-around;
+  padding-bottom: 6px;
+}
+
+.farmers .productions {
+  margin-bottom: 6px;
+}
+
+.farmers img {
+  height: 30px;
+  width: 30px;
+}
+.ferme {
+  height: 30px;
+  width: 30px;
+}
+
+.taille {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
