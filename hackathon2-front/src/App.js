@@ -6,8 +6,10 @@ import RightBar from './components/RightBar';
 
 function App() {
   const [searchBarOn, SetSearchBarOn] = useState(false);
+  const [filterBarOn, SetFilterBarOn] = useState(false);
   const [citiesWithZipcode, setCitiesWithZipcode] = useState([]);
   const [zipcodeInput, setZipcodeInput] = useState("");
+  const [clientFilter, setClientFilter] = useState(false);
 
   const handleZipcodeChange = (e) => {
     setZipcodeInput(e.target.value);
@@ -23,10 +25,6 @@ function App() {
     } else {
       setCitiesWithZipcode([])
     }
-  }
-
-  const onClick = () => {
-    console.log("yolo");
   }
 
   const getCitiesWithZipcode = (zipcode) => {
@@ -46,15 +44,26 @@ function App() {
     SetSearchBarOn(!searchBarOn);
   }
 
+  const onClickFilterBar = () => {
+    SetFilterBarOn(!filterBarOn);
+  }
+
+  const handleFilterClient = () => {
+    setClientFilter(!clientFilter);
+  }
   return (
     <div className="App">
-      <Map />
+      <Map
+        clientFilter={clientFilter} />
       <RightBar
         searchBarOn={searchBarOn}
+        filterBarOn={filterBarOn}
         handleClick={onClickSearchBar}
+        handleFilterClick={onClickFilterBar}
         handleChange={handleZipcodeChange}
         zipcodeInput={zipcodeInput}
         citiesWithZipcode={citiesWithZipcode}
+        handleFilterClient={handleFilterClient}
       />
     </div>
   );
