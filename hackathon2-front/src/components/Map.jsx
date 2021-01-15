@@ -22,9 +22,7 @@ const markerIcon = new L.icon({
   iconSize: [(500, 50)],
 });
 
-const Map = () => {
-  // const [position, setPosition] = useState(null);
-
+const Map = ({ clientFilter, centerPosition }) => {
   // useLeafletContext((position) => {
   //   geolocation.getCurrentPosition(function (err, position) {
   //     console.log(position)
@@ -57,7 +55,7 @@ const Map = () => {
       const long1 = parseInt(position.coords.longitude) - 0.7;
       const long2 = parseInt(position.coords.longitude) + 0.7;
 
-      const url = `http://localhost:5000/api/cities/map?lat1=${lat1}&long1=${long1}&lat2=${lat2}&long2=${long2}`;
+      let url = `http://localhost:5000/api/cities/map?lat1=${lat1}&long1=${long1}&lat2=${lat2}&long2=${long2}&clients_only=${clientFilter}`;
 
       console.log(url);
       axios
@@ -68,12 +66,12 @@ const Map = () => {
           console.log(data);
         });
     });
-  }, []);
+  }, [clientFilter]);
 
   return (
     <MapContainer
       id="mapid"
-      center={[48.448553368159985, 1.5381089746419778]}
+      center={centerPosition}
       zoom={14}
       icon={markerIcon}
       scrollWheelZoom={true}
@@ -108,7 +106,6 @@ const Map = () => {
                 <strong>Produits vendus : </strong>
                 {city.farmers[0].client === true
                   ? product.filter((p) => {
-                      console.log(city.farmers[0]);
                       return city.farmers[0].products[0] === p.id;
                     })[0].category
                   : '0'}
