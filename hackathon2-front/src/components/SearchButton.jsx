@@ -1,12 +1,11 @@
 import React from "react";
 import "./search.css";
-import axios from "axios";
 import searchIcon from "../images/magnifier.svg";
 
-const SearchButton = ({ searchBarOn, onClick }) => {
+const SearchButton = ({ searchBarOn, handleClick }) => {
 
     return (
-        <div className={searchBarOn ? "hidden" : "search-button"} onClick={onClick}>
+        <div className={searchBarOn ? "hidden" : "search-button"} onClick={handleClick}>
             <img className="icon" src={searchIcon} alt="search icon" />
         </div>
     )

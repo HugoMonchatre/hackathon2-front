@@ -1,3 +1,8 @@
+.search{
+    display: flex;
+    flex-direction: column;
+}
+
 .search-button {
     display: flex;
     justify-content: center;
@@ -36,8 +41,16 @@
     width: 30px;
     height: 30px;
     filter: invert(49%) sepia(10%) saturate(1863%) hue-rotate(61deg) brightness(103%) contrast(92%);
-  }
+}
 
-  .hidden {
-      display: none;
-  }
+.search-results{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    margin: 0 15px;
+    background-color: #fff;
+}
+
+.hidden {
+    display: none;
+}
